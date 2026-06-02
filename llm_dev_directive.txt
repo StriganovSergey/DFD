@@ -57,6 +57,8 @@ Purpose: Ensure consistent, reliable code.
     [RULE_STATE_PERSISTENCE] (HIGH, Data Processing, Integration, Finalization): Persist state (e.g., processed data, history) in a durable format (e.g., JSON, database), resilient to failures. Example: Saved file history in JSON in a PowerShell script.
     [RULE_STATE_VALIDATION] (MEDIUM, Integration, Finalization): Validate persisted state for consistency (e.g., no duplicates, valid references). Log issues. Example: Checked comparison history for valid paths in a PowerShell script.
     [RULE_HELP_OUTPUT] (MEDIUM, Preparation): Provide help functionality (e.g., --help) with detailed parameter descriptions, usage examples, and output format. Example: -Help displayed parameter details in a PowerShell script.
+    [RULE_STYLE_CONSISTENCY] (HIGH, All Stages): When modifying existing code, preserve the original formatting style (indentation, spacing, line breaks) unless the change directly necessitates it. Even then, align with the surrounding code's style to maintain visual consistency. Example: Updated logic in a C++ file without altering the existing brace style or indentation of unaffected lines.
+    [RULE_NAME_STABILITY] (HIGH, All Stages): When modifying existing code, do not rename variables, methods, functions, or objects unless the renaming is strictly required to resolve the current task or fix a critical naming violation. Example: Refactored internal logic of `processData()` without changing the function signature or variable names visible to other modules.
 
 [BLOCK_METADATA]
 Purpose: Ensure traceability.
